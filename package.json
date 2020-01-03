@@ -1,0 +1,32 @@
+{
+  "name": "hello-world",
+  "version": "0.0.0",
+  "description": "HelloWorld",
+  "main": "app.js",
+  "devDependencies": {
+    "electron": "\"^7.1.7,"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "howler": "^2.1.3",
+    "iohook": "^0.6.2",
+    "jquery": "^3.4.1"
+  },
+  "iohook": {
+    "targets": [
+      "node-72",
+      "electron-75"
+    ],
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+.vs
+bin
+node_modules
+obj
+HelloWorld.njsproj
+HelloWorld.sln
+package-lock.json
