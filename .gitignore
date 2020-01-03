@@ -2,6 +2,6 @@
 bin
 node_modules
 obj
-HelloWorld.njsproj
-HelloWorld.sln
+Virtual-Mech-Switches.njsproj
+Virtual-Mech-Switches.sln
 package-lock.json
