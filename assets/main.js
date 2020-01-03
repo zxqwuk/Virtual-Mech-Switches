@@ -2,7 +2,6 @@ function playSound() {
     var switch_type = "Gateron-Blue";
     var rand = Math.floor(Math.random() * 6) + 1;
     var location = "assets/switches/" + switch_type + "/" + rand + ".mp3";
-    console.log(location);
     var sound = new Howl({
         src: [location]
     })
