@@ -6,14 +6,14 @@ let win;
 
 function createWindow() {
     win = new BrowserWindow({
-        width: 250,
-        height: 400,
+        width: 350,
+        height: 420,
+        icon: __dirname + "/assets/icon.png",
         webPreferences: {
             nodeIntegration: true
         }
     });
 
-    //win.setResizable(false);
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file',
@@ -22,6 +22,10 @@ function createWindow() {
     win.on('closed', () => {
         win = null;
     })
+
+    win.setMenu(null);
+    win.setResizable(false);
+
 }
 
 app.on('ready', () => {
