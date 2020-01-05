@@ -11,17 +11,15 @@ function playSound() {
 }
 
 function startingScript() {
-    if (switches[start_index] != "Disabled") {
-        var location = "assets/switches/" + switches[start_index] + "/1.mp3";
-        var sound = new Howl({
-            src: [location]
-        })
-        Howler.volume(0.5);
-        sound.play();
-        start_index++;
-        if (start_index == 8) {
-            stopFunction();
-        }
+    var location = "assets/switches/" + switches[start_index] + "/1.mp3";
+    var sound = new Howl({
+        src: [location]
+    })
+    Howler.volume(VOL);
+    sound.play();
+    start_index++;
+    if (start_index == 9) {
+        stopFunction();
     }
 }
 
@@ -43,15 +41,10 @@ var switches = [
     "Kailh-Pro-Purple"
 ]
 
-var selected_switch = "Cherry-MX-Silent-Black";
+var selected_switch = "Kailh-Pro-Purple";
 
 var VOL = 0.75;
-var start_index = 0;
-var myVar = setInterval(startingScript, 100);
-
-function stopFunction() {
-    clearInterval(myVar);
-}
+var start_index = 1;
 
 //iohook key codes are sorted qwerty wise with q=16
 ioHook.registerShortcut([1], () => { playSound() }); /* ESC */
@@ -247,15 +240,26 @@ function switchArray(selected_switch) {
     bindSwitchButtons();
 }
 
+function stopFunction() {
+    clearInterval(myVar);
+}
+
+var myVar;
 let $ = require("jquery")
 
 $(function () {
 
-    switchArray(selected_switch)
+    switchArray(selected_switch);
+    myVar = setInterval(startingScript, 100);
 
     $("#volume_slider").on('input', function () {
         VOL = (this.value) / 100;
         $("#volume_value").html(this.value + "%");
+    });
+
+    $("#volume_icon").click(function () {
+        start_index = 1;
+        myVar = setInterval(startingScript, 100);
     });
 
 });

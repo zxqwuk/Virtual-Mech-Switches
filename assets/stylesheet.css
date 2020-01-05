@@ -149,6 +149,7 @@ a:link, a:visited, a:active {
 #volume_icon {
     position: relative;
     left: -124px;
+    z-index: 1;
 }
 
 #volume_value {
