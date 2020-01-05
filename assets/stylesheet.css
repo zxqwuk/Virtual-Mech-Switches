@@ -12,7 +12,7 @@ html, body {
 
 body {
     position: relative;
-    background: #202023;
+    background: #10100e;
     height: 600px;
     width: 100%;
     font-family: 'Muli', sans-serif;
@@ -121,7 +121,8 @@ a:link, a:visited, a:active {
 
 #volume {
     position: relative;
-    top: 220px;
+    top: 240px;
+    height: 25px;
     text-align: center;
 }
 
@@ -131,8 +132,8 @@ a:link, a:visited, a:active {
     margin: -0px -200px;
     -webkit-appearance: none;
     width: 200px;
-    height: 5px;
-    top: -16px;
+    height: 3px;
+    top: -15px;
     outline: none;
     z-index: 1;
 }
@@ -155,6 +156,7 @@ a:link, a:visited, a:active {
 #volume_value {
     position: relative;
     width: 320px;
-    top: -34px;
+    top: -29px;
+    left: 0px;
     text-align: right;
 }

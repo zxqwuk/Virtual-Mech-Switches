@@ -11,7 +11,7 @@ var hidden = false;
 function createWindow() {
     top.win = new BrowserWindow({
         width: 350,
-        height: 420,
+        height: 425,
         resizeable: false,
         fullscreen: false,
         fullscreenable: false,
