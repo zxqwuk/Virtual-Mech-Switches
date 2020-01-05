@@ -18,7 +18,7 @@ function startingScript() {
     Howler.volume(VOL);
     sound.play();
     start_index++;
-    if (start_index == 9) {
+    if (start_index == 10) {
         stopFunction();
     }
 }
@@ -35,6 +35,7 @@ var switches = [
     "Gateron-Clear",
     "Gateron-Clear-with-O-Rings",
     "Kailh-BOX-Heavy-Burnt-Orange",
+    "Kailh-BOX-Heavy-Navy",
     "Kailh-BOX-Heavy-Pale-Blue",
     "Kailh-BOX-White",
     "Kailh-Pro-Light-Green",
@@ -185,6 +186,13 @@ function bindSwitchButtons() {
     $("#Kailh-BOX-Heavy-Pale-Blue").click(function () {
         if ($("#Kailh-BOX-Heavy-Pale-Blue").hasClass("switch")) {
             selected_switch = "Kailh-BOX-Heavy-Pale-Blue"
+            updateSwitch(selected_switch);
+            playSound();
+        }
+    });
+    $("#Kailh-BOX-Heavy-Navy").click(function () {
+        if ($("#Kailh-BOX-Heavy-Navy").hasClass("switch")) {
+            selected_switch = "Kailh-BOX-Heavy-Navy"
             updateSwitch(selected_switch);
             playSound();
         }
